@@ -1,0 +1,72 @@
+{
+  "mcpServers": {
+    "Atlassian-Rovo-MCP": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "https://mcp.atlassian.com/v1/mcp"
+      ],
+      "disabled": true
+    },
+    "atlassian-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.atlassian.com/v1/sse"
+      ],
+      "env": {},
+      "disabled": false
+    },
+    "gmail": {
+      "command": "powershell",
+      "args": [
+        "-Command",
+        "cd 'E:/Training Project/Gmail MCP server'; py index.py"
+      ],
+      "disabledTools": [],
+      "disabled": false
+    },
+    "perplexity": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@perplexity-ai/mcp-server"
+      ],
+      "env": {
+        "PERPLEXITY_API_KEY": "YOUR_API_KEY_HERE"
+      },
+      "disabled": false
+    },
+    "m2mba": {
+      "command": "node",
+      "args": [
+        "E:\\Training Project\\MCP DB M2MBA\\dist\\index.js"
+      ]
+    },
+    "notebooklm": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "notebooklm-mcp@latest"
+      ],
+      "disabledTools": [
+        "add_notebook",
+        "list_notebooks",
+        "get_notebook",
+        "select_notebook",
+        "update_notebook",
+        "remove_notebook",
+        "list_sessions",
+        "get_library_stats",
+        "close_session",
+        "reset_session",
+        "get_health",
+        "setup_auth",
+        "re_auth",
+        "cleanup_data"
+      ]
+    }
+  }
+}
